@@ -1,15 +1,22 @@
 \usepackage{listings}
 \usepackage{color}
-\definecolor{graycomments}{rgb}{0.6,0.6,0.6}
 \lstdefinelanguage{Pseudokode}
+    % list of keywords
     {morekeywords={let, new, match, with, while, rec, open, module, namespace, type, of, member, and, for, in, do, begin, end, fun, function, try, mutable, if, then, else,return}, 
-    keywordstyle=\bfseries,
-    morecomment=[l][\color{graycomments}]{//},
-    literate=
+    sensitive = false, % keywords are not case-sensitive
+    morecomment = [l]{//},
+    literate = % these characters will be parsed as the following symbols
         {<-}{$\leftarrow{}$}{1}
         {->}{$\rightarrow{}$}{1},
-    numbers=left,
-    frame=tb,
-    columns = fullflexible,
-    sensitive=false,
     }
+
+\definecolor{graycomments}{rgb}{0.6,0.6,0.6}
+\lstset{
+    language = {Pseudokode},
+    breaklines = true, % wrap lines if they don't fit
+    numbers = left, % numbers on the left boarder
+    frame = tb, % frame line on the top and bottum boarder
+    columns = flexible, % flexible collums
+    keywordstyle=\bfseries,
+    commentstyle = \color{graycomments}
+}
