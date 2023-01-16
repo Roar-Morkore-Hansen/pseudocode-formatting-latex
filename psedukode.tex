@@ -5,18 +5,18 @@
     {morekeywords={let, new, match, with, while, rec, open, module, namespace, type, of, member, and, for, in, do, begin, end, fun, function, try, mutable, if, then, else,return}, 
     sensitive = false, % keywords are not case-sensitive
     morecomment = [l]{//},
-    literate = % these characters will be parsed as the following symbols
+    literate = % these characters will be parsed as symbols
         {<-}{$\leftarrow{}$}{1}
         {->}{$\rightarrow{}$}{1},
     }
 
 \definecolor{graycomments}{rgb}{0.6,0.6,0.6}
 \lstset{
-    language = {Pseudokode},
+    language = {Pseudokode}, % language name 
     breaklines = true, % wrap lines if they don't fit
     numbers = left, % numbers on the left boarder
     frame = tb, % frame line on the top and bottum boarder
     columns = flexible, % flexible collums
-    keywordstyle=\bfseries,
-    commentstyle = \color{graycomments}
+    keywordstyle=\bfseries, % keywords are parsed as bold
+    commentstyle = \color{graycomments} % comments are colored gray
 }
